@@ -7,6 +7,7 @@
     "https://deno.land": true,
     "https://cdn.nest.land": true,
     "https://crux.land": true
-  }
+  },
+  "deno.importMap":"./import_map.json"
 }
 
