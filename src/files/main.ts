@@ -2,9 +2,23 @@ import * as types from 'files/types.d.ts';
 import { join } from '@/deps.ts';
 
 export const Directories: types.Directories = {
+  /**
+   * @description Returns the current dir
+   */
   currentDir: () => Deno.cwd(),
+  /**
+   * @description Return the home directory
+   */
   homeDir: () => Deno.env.get('HOME') ?? Deno.env.get('USERPROFILE'),
+  /**
+   * @description Return the temp directory
+   */
   tempDir: () => Deno.env.get('TEMP') ?? Deno.env.get('TEMPDIR'),
+  /**
+   * @description The cache dir
+   * @param {string} app - App name for return the dir
+   * @returns {string} The cache dir value
+   */
   cacheDir: (app: string): string => {
     switch (Deno.build.os) {
       case 'linux':
@@ -15,6 +29,11 @@ export const Directories: types.Directories = {
         return join(Deno.env.get('USERPROFILE')!, 'AppData', 'Local', app);
     }
   },
+  /**
+   * @description The config dir
+   * @param {string} app - App name for return the dir
+   * @returns {string} Config dir value
+   */
   configDir: (app: string): string => {
     switch (Deno.build.os) {
       case 'linux':
@@ -33,6 +52,11 @@ export const Directories: types.Directories = {
 };
 
 export const Files: types.Files = {
+  /**
+   * @description Check if file or folder exists
+   * @param {string} file - The file or folder path to check if exists
+   * @returns {boolean} True if exists false if not
+   */
   exists: (file: string): boolean => {
     try {
       Deno.lstatSync(file);
@@ -44,6 +68,12 @@ export const Files: types.Files = {
       throw err;
     }
   },
+  /**
+   * @description Write a json file
+   * @param {string} path - Path and name to write the json file
+   * @param {Record<string,unknown>} data - Data to write in the json file
+   * @returns {boolean} True if is success and false
+   */
   writeJson: (path: string, data: Record<string, unknown>): boolean => {
     try {
       Deno.writeTextFileSync(path, JSON.stringify(data));
