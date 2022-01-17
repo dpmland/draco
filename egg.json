@@ -1,0 +1,28 @@
+{
+  "$schema": "https://x.nest.land/eggs@0.3.10/src/schema.json",
+  "name": "draco",
+  "entry": "./mod.ts",
+  "description": "File and folder multiplatform utils for Deno!",
+  "homepage": "https://github.com/dpmland/draco",
+  "version": "1.0.0",
+  "releaseType": null,
+  "unstable": false,
+  "unlisted": false,
+  "files": [
+    "src/",
+    "import_map.json",
+    "README.md",
+    "deno.json",
+    "LICENSE"
+  ],
+  "ignore": [
+    ".nlsp-setttings/",
+    ".github/",
+    ".editorconfig",
+    "CODE_OF_CONDUCT.md"
+  ],
+  "checkFormat": "deno fmt -c deno.json --check",
+  "checkTests": false,
+  "checkInstallation": true,
+  "check": false
+}

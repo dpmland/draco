@@ -4,7 +4,7 @@ import { DenoInfo, SystemInfo } from 'platform/info.ts';
 /**
  * @description The draco modules for files and directories operations
  */
-const dracoFiles = {
+export const dracoFiles = {
   ...Directories,
   ...Files,
 };
@@ -12,9 +12,7 @@ const dracoFiles = {
 /**
  * @description The draco modules for get the info
  */
-const dracoInfo = {
+export const dracoInfo = {
   ...SystemInfo,
   ...DenoInfo,
 };
-
-export default { dracoInfo, dracoFiles };
