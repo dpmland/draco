@@ -22,8 +22,8 @@ informations :p
 ```ts
 import { dracoFiles, dracoInfo } from 'https://deno.land/x/draco@0.1.1/mod.ts';
 
-console.log(dracoFiles.Files.currentDir);
-console.log(dracoInfo.SystemInfo.platform());
+console.log(dracoFiles.currentDir);
+console.log(dracoInfo.platform());
 ```
 
 ---
