@@ -6,11 +6,11 @@ export interface Directories {
   /**
    * Return the cache dir
    */
-  cacheDir(app:string): string | undefined;
+  cacheDir(app: string): string | undefined;
   /**
    * Return the config dir.
    */
-  configDir(app: string): string  | undefined;
+  configDir(app: string): string | undefined;
   /**
    * Return the temp dir.
    */
