@@ -1,5 +1,5 @@
-import { Directories, Files } from 'files/main.ts';
-import { DenoInfo, SystemInfo } from 'platform/info.ts';
+import { Directories, Files } from './src/files/main.ts';
+import { DenoInfo, SystemInfo } from './src/platform/info.ts';
 
 /**
  * @description The draco modules for files and directories operations

@@ -1,7 +1,0 @@
-{
-  "imports": {
-    "platform/": "./src/platform/",
-    "@/": "./src/",
-    "files/": "./src/files/"
-  }
-}

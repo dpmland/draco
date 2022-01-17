@@ -1,4 +1,4 @@
-import * as types from 'platform/types.d.ts';
+import * as types from './types.d.ts';
 
 export const SystemInfo: types.SystemInfo = {
   /**

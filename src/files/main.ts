@@ -1,5 +1,5 @@
-import * as types from 'files/types.d.ts';
-import { join } from '@/deps.ts';
+import * as types from './types.d.ts';
+import { join } from '../deps.ts';
 
 export const Directories: types.Directories = {
   /**
