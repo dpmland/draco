@@ -1,4 +1,4 @@
-import { dracoInfo } from 'https://deno.land/x/draco@0.1.2/mod.ts';
+import { dracoInfo } from 'https://deno.land/x/draco@0.1.3/mod.ts';
 
 // Prints the os in was running
 console.log(dracoInfo.platform());
